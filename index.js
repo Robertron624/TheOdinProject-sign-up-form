@@ -41,7 +41,8 @@ function main() {
             confirmPassword,
         });
 
-        alert("Congrats! You have successfully signed up to a fake page!");
+        clearInputs();
+        createToast("Account created successfully!", 3000);
     });
 
     // If the password has input error and error message and starts to type, the error message should disappear
@@ -57,12 +58,46 @@ function main() {
 
         if (passwordInput.classList.contains("error-active")) {
             passwordError.textContent = "";
+            confirmPasswordInput.textContent = "";
             passwordInput.classList.remove("error-active");
             confirmPasswordInput.classList.remove("error-active");
         }
     });
+}
 
-    // checking function
+function createToast(message, time){
+    const toastContainer = document.createElement("div");
+    toastContainer.classList.add("toast-container");
+
+    const toast = document.createElement("div");
+    toast.classList.add("toast");
+
+    const toastMessage = document.createElement("h3");
+    toastMessage.textContent = message;
+
+    toast.appendChild(toastMessage);
+    toast.classList.add("slide-in");
+    toastContainer.appendChild(toast);
+
+    document.body.appendChild(toastContainer);
+
+
+    setTimeout(() => {
+        toast.classList.remove("slide-in");
+        toast.classList.add("slide-out");
+    }, time);
+
+    setTimeout(() => {
+        document.body.removeChild(toastContainer);
+    }, time + 500);
+
+}
+
+function clearInputs() {
+    const inputs = document.querySelectorAll("input");
+    inputs.forEach((input) => {
+        input.value = "";
+    });
 }
 
 window.onload = main;
