@@ -238,6 +238,21 @@ section.content {
     font-size: .8rem;
 }
 
+.form-container form input:focus {
+    border: 1.5px solid var(--input-outline-focus);
+}
+
+.form-container form .input-container .error {
+    font-size: .4rem;
+    color: rgba(204, 2, 2, 0.796);
+    display: block;
+}
+
+
+.form-container form input.error-active {
+    border: 1.5px solid var(--input-outline-error);
+}
+
 .form-container form .submit-container {
     padding: 1rem 2rem;
     border-top: 1.2px solid rgba(0, 0, 0, .2);

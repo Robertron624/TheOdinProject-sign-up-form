@@ -40,14 +40,16 @@
                             <label for="first-name">
                                 First Name
                             </label>
-                            <input type="text" id="first-name" name="first-name" placeholder="First Name">
+                            <input required type="text" id="first-name" name="first-name" placeholder="First Name">
+                            <span class="error"></span>
                         </div>
 
                         <div class="input-container">
                             <label for="last-name">
                                 Last Name
                             </label>
-                            <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+                            <input required type="text" id="last-name" name="last-name" placeholder="Last Name">
+                            <span class="error"></span>
                         </div>
                     </div>
                     <div class="row">
@@ -55,14 +57,16 @@
                             <label for="email">
                                 Email
                             </label>
-                            <input type="email" id="email" name="email" placeholder="Email">
+                            <input required type="email" id="email" name="email" placeholder="Email">
+                            <span class="error"></span>
                         </div>
 
                         <div class="input-container">
                             <label for="phone">
-                                Phone
+                                Phone Number
                             </label>
-                            <input type="tel" id="phone" name="phone" placeholder="Phone">
+                            <input required type="tel" id="phone" name="phone" placeholder="Phone">
+                            <span class="error"></span>
                         </div>
                     </div>
                     <div class="row">
@@ -70,14 +74,16 @@
                             <label for="password">
                                 Password
                             </label>
-                            <input type="password" id="password" name="password" placeholder="Password">
+                            <input minlength="5" required type="password" id="password" name="password" placeholder="Password">
+                            <span class="error"></span>
                         </div>
 
                         <div class="input-container">
                             <label for="confirm-password">
                                 Confirm Password
                             </label>
-                            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                            <input minlength="5" required type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                            <span class="error"></span>
                         </div>
                     </div>
                     <div class="submit-container">
