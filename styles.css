@@ -1,0 +1,191 @@
+/* START OF RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+    padding: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+p,
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 0;
+}
+
+/* dark mode preference */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: hsl(0, 3%, 16%);
+        color: #fff;
+    }
+}
+
+/* ENDING OF RESET */
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+
+    --bg-cta: #596D48;
+    --input-outline: #E5E7EB;
+    --input-outline-error: #DC2626;
+    --input-outline-focus: #2563EB;
+    --input-text: #111827;
+}
+
+@font-face {
+    font-family: "Norse-Bold";
+    src: url("./assets/fonts/Norse-Bold.otf");
+    font-weight: bold;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 3.5fr;
+    height: 100vh;
+}
+
+/* Aside image/logo */
+
+.aside {
+    background-image: url("./assets/images/aside-dive-copressed.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20vh;
+}
+
+.aside .logo-container {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.aside .logo-container img {
+    width: 100%;
+    max-width: 70px;
+}
+
+.aside .logo-container h1 {
+    font-family: "Norse-Bold";
+    font-size: 4rem;
+    color: #fff;
+}
+
+.aside .attribution {
+    text-align: center;
+    font-size: .5rem;
+    background-color: rgba(0, 0, 0, .5);
+    color: #f6f6f6;
+}
+
+/* Main content */
+
+section.content {
+    background-color: #fff;
+    color: var(--input-text);
+    padding: 8rem 2rem;
+}
